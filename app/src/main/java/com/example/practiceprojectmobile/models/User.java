@@ -5,18 +5,40 @@ public class User {
     private String firstName;
     private String lastName;
     private String username;
+    private String password;
     private int age;
+    private Role role;
 
-    public User(int id, String firstName, String lastName, String username, int age) {
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public User(int id, String firstName, String lastName, String username, int age, Role role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.age = age;
+        this.role = role;
+    }
+
+    public User() {
     }
 
     public int getId() {
         return id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setId(int id) {
